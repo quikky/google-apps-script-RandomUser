@@ -1,6 +1,6 @@
 # google-apps-script-RandomUser
 
-Google Apps Script + Google Apps Script Trigger + Google Spreadsheet + Slack Api => RandomUser
+Google Apps Script + Google Apps Script Trigger + Google Spreadsheet + Slack Api => RandomUser  
 Business day only run : base jpn
 
 ## How to Use
