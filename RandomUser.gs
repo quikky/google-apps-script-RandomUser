@@ -8,12 +8,12 @@ function createTrigger() {
         ScriptApp.newTrigger("RandomUser").timeBased().at(triggerDay).create();
     }
 }
-/** DAY TRIGGER Remove - RandomUser() **/
-function removeTrigger() {
+/** DAY TRIGGER Delete - RandomUser() **/
+function deleteTrigger() {
     var triggers = ScriptApp.getProjectTriggers();
     for (var i = 0; i < triggers.length; i++) {
         if (triggers[i].getHandlerFunction() == "RandomUser") {
-            ScriptApp.removeTrigger(triggers[i]);
+            ScriptApp.deleteTrigger(triggers[i]);
         }
     }
 }
@@ -50,7 +50,7 @@ var sheetdata = sheet.getSheetValues(startrow, startcol, lastrow, lastcol); // a
 
 /** Slack Post **/
 function RandomUser() {
-    removeTrigger();
+    deleteTrigger();
     var Name;
     var NewName;
     var LastName = new String(sheetdata[1][3]);
